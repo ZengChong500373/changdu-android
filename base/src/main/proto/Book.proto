@@ -1,0 +1,304 @@
+syntax = "proto3";
+option java_package = "com.api.changdu.proto";
+option java_outer_classname = "BookApi";
+//----------------------------------------------------------------------------------------
+//书籍对象【元数据】
+//概况对象BookOverView
+message BookOverView{
+    string bookID = 1;                  //书籍的唯一Id
+    int64  firstChapterId = 2;          //第一章的ID
+    int64  lastChapterId = 3;           //最后一章的ID
+    string  lastChapterUpdateTime = 4;  //最后一章更新的时间--几小时前 OR 2019-01-31
+    string lastChapterTitle = 5;        //最后一章的标题
+    int32  chapterTotal = 6;            //章节总数
+    string  wordsTotal = 7;             //文字总数--1000字 OR 10W字
+    string title = 8;                   //书籍标题
+    string authorName = 9;              //作者名字
+    string coverImage = 10;             //封面
+    string status = 11;                 //完本、连载
+    string readTotal = 12;              //阅读总数
+    string recommendTotal = 13;        //推荐总数
+    int32  start = 14;                  //评分总数【new】
+    string fansTotal = 15;             //粉丝数量【new】
+    int32  ticketMonth = 16;            //月票总数【new】
+    string categoryName = 17;           //类别名称
+    string description = 18;            //书籍描述
+    bool   hasBook = 19;                //当前用户是否已经添加这本书到书架了
+}
+
+//主页推荐数据（v1/book/domainRecommend）
+//请求【ReqDomainRecommend】
+//响应【AckDomainRecommend】
+message ReqDomainRecommend{
+
+}
+
+message AckDomainRecommend{
+    repeated BookOverView hot = 1;
+    repeated Data data = 2;
+    message Data{
+        string recommendName = 1;                        //推荐的名称
+        repeated BookOverView bookOverView = 2;          //书籍概况
+    }
+}
+
+//查询最热的搜索热词（v1/book/hotKeyWord）
+//请求【ReqHotKeyWord】
+//响应【AckHotKeyWord】
+message ReqHotKeyWord{
+
+}
+message AckHotKeyWord{
+    repeated string keyWord = 1;                          //最热的热词
+}
+
+
+//搜索（v1/book/search）
+//请求【ReqSearch】
+//响应【AckSearch】
+message ReqSearch{
+    int32 currentPage = 1;              //当前第几页,数据从1开始,1表示第一页
+    int32 pageSize = 2;                 //每页多少条
+    string keyWord = 3;                 //关键字(目前是按照【书名】和【作者】名字搜索)
+}
+
+message AckSearch{
+    int32 maxPage = 1;                      //最大页数
+    int64 totalElement = 2;                 //总共多少条数据
+    repeated BookOverView bookOverView = 3; //书籍的数据
+}
+
+//类别列表（v1/book/categoryList）
+//请求【ReqCategoryList】
+//响应【AckCategoryList】
+message ReqCategoryList{
+
+}
+message AckCategoryList{
+    repeated Rank rank = 1;                //类别信息
+    message Rank{
+        string name = 1;                   //分类排行的名称
+        repeated Category Category = 2;    //分类排行数据
+    }
+    message Category{
+        string name = 1;                    //类别名字
+        int32 num = 2;                      //该类别的书籍数量
+        string coverImg =3;                 //封面地址
+    }
+}
+//【排行榜】【step1】排行榜列表数据（v1/book/indexRankingList）
+//请求【ReqIndexRankingList】
+//响应【AckIndexRankingList】
+message ReqIndexRankingList{
+
+}
+message AckIndexRankingList{
+    repeated  Site site =1;                 //站点信息
+    message Site{
+        string  name = 1;                   //站点名称
+        repeated Rank rank = 2;             //排行
+    }
+    message Rank{
+        string name = 1;                    //排行的名称
+    }
+}
+
+//【排行榜】【step2】排行榜列表数据（v1/book/indexRankingDetail）
+//请求【ReqIndexRankingDetail】
+//响应【AckIndexRankingDetail】
+message ReqIndexRankingDetail{
+    int32 currentPage = 1;                  //当前第几页,数据从1开始,1表示第一页
+    int32 pageSize = 2;                     //每页多少条
+    string siteName = 3;                    //站点名
+    string rankName = 4;                    //排行名
+}
+message AckIndexRankingDetail{
+    int32 maxPage = 1;                      //最大页数
+    int64 totalElement = 2;                 //总共多少条数据
+    string siteName = 3;                    //站点名
+    string rankName = 4;                    //排行名
+    repeated BookOverView bookOverView = 5; //对应书籍
+}
+
+
+//书籍二级分类的数据（v1/book/rankOption）
+//--请求【ReqRankOption】
+//--响应【AckRankOption】
+message ReqRankOption{
+    string categoryName = 1;                 //类别的名字
+}
+
+message AckRankOption{
+    string categoryName = 1;                 //类别的名字
+    repeated string rankOption = 2;          //书籍二次分类的名字
+}
+
+//书籍列表（v1/book/list）
+//--请求【ReqBookList】
+//--响应【AckBookList】
+message ReqBookList{
+    int32 currentPage = 1;                  //当前第几页,数据从1开始,1表示第一页
+    int32 pageSize = 2;                     //每页多少条
+    string categoryName = 3;                //类别--AckCategoryList.Rank.Category
+    string rankOption = 4;                  //可以不填写(默认为一个tab,需要切换tab传入对于名称)--AckRankOption
+}
+
+message AckBookList{
+    string currentRankOption = 1;           //当前的分类排行数据
+    int32 maxPage = 2;                      //最大页数
+    int64 totalElement = 3;                 //总共多少条数据
+    repeated BookOverView bookOverView = 4; //书籍的数据
+}
+
+//书籍详细（v1/book/detail）
+//--请求【ReqBookDetail】
+//--响应【AckBookDetail】
+message ReqBookDetail{
+    string bookID = 1;                  //书籍的唯一Id
+}
+
+message AckBookDetail{
+    BookOverView bookOverView = 1;          //书籍概况
+    repeated SameBook sameBook = 2;         //同类书籍
+    message SameBook{
+        string bookID = 1;                  //书籍的唯一Id
+        int64  firstChapterId = 2;          //第一章的ID
+        string title = 3;                   //书籍标题
+        string authorName = 4;              //作者名字
+        string coverImage = 5;              //封面
+    }
+    //TODO 书评列表
+}
+//章节元数据
+message ChapterMsg{
+    int32  chapterID = 1;                //章节ID
+    string bookID = 2;                   //书ID
+    string chapterName = 3;              //章节标题
+    int32  payType = 4;                  //当前用户该章节是否需要付费-- 1:免费 2:收费
+}
+//【章节】【step1】章节目录信息(v1/book/chapterIndex)
+//--请求【ReqChapterIndex】
+//--响应【AckChapterIndex】
+message ReqChapterIndex{
+    string bookID = 1;                       //书的ID
+}
+message AckChapterIndex{
+    repeated ChapterMsg chapterMsg = 1;      //章节信息
+}
+//----------------------------------------------------------------------------------------
+//【章节】【step2】章节详细查看/章节详细购买（v1/book/chapter）
+//--请求ReqChapter
+//--响应AckChapter
+message ReqChapter{
+    string bookID = 1;                        //书籍的ID(必填)
+    string chapterIds = 2;                    //章节的ID集合，可以多章(非必填项)--如果不写，默认为该书的第一章节的数据 eg: xxxxx,xxxxx,xxxxx,xxx
+    int32  purchase = 3;                      //购买或者查看 1:查看 2:购买
+}
+
+message AckChapter{
+    int32 score = 1;                          //当前用户剩余的积分--如果小于所需要的书币，在章节购买时提示用户去【做任务】
+    repeated Data data = 2;                   //对应的章节数据
+    message Data{
+        ChapterMsg chapterMsg = 1;            //章节信息
+        string content = 2;                   //章节内容
+        int32  words = 3;                     //该章节的文字长度
+        int32  chapterSortIndex = 4;          //当前章节在【AckChapterIndex】这个数据里面的下标位置
+    }
+}
+
+//----------------------------------------------------------------------------------------
+//书籍分享（v1/book/share）-----【暂时作废】
+//--请求【ReqBookShare】
+//--响应【AckBookShare】
+message ReqBookShare{
+    string BookId = 1;                         //书籍ID
+}
+message AckBookShare{
+    string BookId = 1;                         //书籍ID
+    string introduce = 2;                      //介绍
+    string url = 3;                            //分享的地址
+    string imgUrl = 4;                         //分享的封面
+}
+
+//----------------------------------------------------------------------------------------
+//书籍分享（v1/book/shareFinish）
+//--请求【ReqBookShareFinish】
+//--响应【AckBookShareFinish】
+message ReqBookShareFinish{
+    string BookId = 1;                         //书籍ID
+}
+message AckBookShareFinish{
+    string BookId = 1;                         //暂时可以不用管
+}
+
+//----------------------------------------------------------------------------------------
+//加入书架 / 取消加入书架 （v1/book/addOrRemoveBookShelf）--批量加入书架
+message ReqBookShelf{
+    string bookIds = 1;                             //书籍ID集合，用逗号隔开 eg:  xxxx,xxx,xxxx,xxx
+    int32  isAdd = 2;                               //是否加入书架 2:加入书架 1:从书架中移除
+}
+message AckBookShelf{
+    repeated BookOverView bookOverView = 1;
+}
+
+//我的书架（v1/book/myBookShelf）
+message ReqMyBookShelf{
+    int32 currentPage = 1;                             //当前第几页,数据从1开始,1表示第一页
+    int32 pageSize = 2;                                //每页多少条
+}
+
+message AckMyBookShelf{
+	int32 maxPage = 1;                                 //最大页数
+    int64 totalElement = 2;                 		   //总共多少条数据
+    repeated Data data = 3;							   //当前用户书架信息
+    message Data{
+        BookOverView bookOverView = 1;                 //书籍详细
+        bool isRecommend = 2;                          //是否是系统推荐的 true:系统推荐 false:当前用户自选的
+        bool isTop = 3;                                //当前书籍是否已经置顶了
+    }
+}
+
+//书架中书籍置顶|取消置顶（v1/book/topBookShelf）
+message ReqTopBookShelf{
+    string bookID = 1;                                  //需要置顶|取消置顶的书籍ID
+    int32   top = 2;                                     //是否置顶 2:置顶 1:取消置顶
+}
+
+message AckTopBookShelf{
+    string bookID = 1;                                   //需要置顶|取消置顶的书籍ID
+    int32   top = 2;                                     //是否置顶 2:置顶 1:取消置顶
+}
+
+
+//----------------------------------------------------------------------------------------
+//书籍专题介绍列表(v1/book/themeIntro)
+message ReqBookThemeIntro{
+    int32 currentPage = 1;                             //当前第几页,数据从1开始,1表示第一页
+    int32 pageSize = 2;                                //每页多少条
+}
+
+message AckBookThemeIntro{
+    int32 maxPage = 1;                                 //最大页数
+    int64 totalElement = 2;                 		   //总共多少条数据
+    repeated Data data = 3;                            //专题介绍数据
+    message Data{
+        int32  id = 1;                                 //专题ID
+        string title = 2;                              //标题
+        string coverImage = 3;                         //专题的封面图片
+        string description = 4;                        //专题的描述
+    }
+
+}
+//书籍专题详细(v1/book/themeDetail)
+message ReqBookThemeDetail{
+    int32  id = 1;                                      //专题ID
+}
+
+message AckBookThemeDetail{
+    int32  id = 1;                                       //专题ID
+    repeated Theme theme = 2;                            //主题信息
+    message Theme{
+        string title = 1;
+        repeated BookOverView bookOverView = 2;
+    }
+}

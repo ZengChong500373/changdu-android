@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:id="@+id/mission_header"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/h_15"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/v_58"
+        android:background="@mipmap/bg_reward_header" />
+
+    <View
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/v_159"
+        android:layout_below="@+id/head"
+        android:background="@color/luck_turn_bottom_bg" />
+
+    <org.linyi.ui.text.SingleCenterTextView
+        android:id="@+id/score_num"
+        style="@style/wrap_wrap"
+        android:textColor="@color/coin_text"
+        android:textSize="@dimen/text_18"
+        android:drawablePadding="@dimen/h_8"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/h_10"
+        android:layout_width="@dimen/h_150"
+        android:layout_height="@dimen/v_43"
+        android:drawableLeft="@mipmap/ic_coin"
+        />
+    <!--
+    bind:drawableSize="@dimen/h_24"
+    -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/h_18"
+        android:layout_marginRight="@dimen/h_18"
+        android:layout_alignBottom="@+id/bottom"
+        android:layout_marginBottom="@dimen/v_20"
+        android:orientation="horizontal"
+        android:background="@color/scroll_bg">
+
+        <com.linyi.viva.extra.ui.weidgt.AutoScrollView
+            android:id="@+id/autoScrollView"
+            android:layout_width="@dimen/h_0"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/h_7"
+            android:layout_marginRight="@dimen/h_7"
+            android:layout_height="@dimen/v_118"
+            android:background="@drawable/shape_luck_turn_item"/>
+
+        <com.linyi.viva.extra.ui.weidgt.AutoScrollView
+            android:id="@+id/autoScrollView2"
+            android:layout_width="@dimen/h_0"
+            android:layout_weight="1"
+            android:layout_height="@dimen/v_118"
+            android:background="@drawable/shape_luck_turn_item"/>
+
+        <com.linyi.viva.extra.ui.weidgt.AutoScrollView
+            android:id="@+id/autoScrollView3"
+            android:layout_width="@dimen/h_0"
+            android:layout_marginLeft="@dimen/h_7"
+            android:layout_marginRight="@dimen/h_7"
+            android:layout_weight="1"
+            android:layout_height="@dimen/v_118"
+            android:background="@drawable/shape_luck_turn_item"/>
+    </LinearLayout>
+
+</RelativeLayout>
+

@@ -1,0 +1,9 @@
+<resources>
+
+    <dimen name="reader_setting_margin">@dimen/h_18</dimen>
+
+    <dimen name="reader_setting_height">@dimen/v_60</dimen>
+
+    <dimen name="reader_setting_right_width">@dimen/h_90</dimen>
+
+</resources>

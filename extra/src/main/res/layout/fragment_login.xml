@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="@dimen/v_85"
+        android:layout_height="@dimen/v_85"
+        android:src="@mipmap/ic_launcher"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/v_70"
+        />
+
+    <EditText
+        android:id="@+id/et_tel"
+        style="@style/edit_single"
+        android:layout_below="@+id/img"
+        android:layout_marginTop="@dimen/v_43"
+        android:layout_marginLeft="@dimen/h_38"
+        android:layout_marginRight="@dimen/h_38"
+        android:hint="@string/input_tel"
+        android:drawableLeft="@mipmap/ic_tel"
+        android:maxLength="11"
+        android:inputType="number"
+        />
+
+    <EditText
+        android:id="@+id/et_code"
+        style="@style/edit_single"
+        android:layout_below="@+id/et_tel"
+        android:layout_marginTop="@dimen/v_14"
+        android:layout_marginLeft="@dimen/h_38"
+        android:layout_marginRight="@dimen/h_38"
+        android:hint="@string/input_code"
+        android:drawableLeft="@mipmap/ic_pw"
+        />
+
+    <com.linyi.viva.extra.ui.weidgt.CodeTextView
+        android:id="@+id/send_code"
+        style="@style/wrap_wrap"
+        android:textColor="@color/enable_primary_dark"
+        android:textSize="@dimen/text_13"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/et_code"
+        android:layout_alignBottom="@+id/et_code"
+        android:layout_alignRight="@+id/et_code"
+        android:text="@string/reg_get_code"
+        android:gravity="center"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        />
+
+    <org.linyi.ui.text.StateButton
+        android:id="@+id/login"
+        style="@style/btn_primary"
+        android:layout_below="@+id/et_code"
+        android:layout_marginLeft="@dimen/h_38"
+        android:layout_marginRight="@dimen/h_38"
+        android:layout_marginTop="@dimen/v_14"
+        android:text="@string/login"
+        app:round="@dimen/semicircle"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/v_21"
+        android:gravity="center_horizontal">
+
+        <TextView style="@style/wrap_wrap"
+            android:textSize="@dimen/text_11"
+            android:textColor="@color/text_gray_color"
+            android:text="@string/click_login_agree"
+            />
+
+        <TextView
+            android:id="@+id/user_agreement"
+            style="@style/wrap_wrap"
+            android:textSize="@dimen/text_11"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/user_agreement"
+            />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/skip"
+        style="@style/wrap_wrap"
+        android:textSize="@dimen/text_19"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/v_39"
+        android:layout_centerHorizontal="true"
+        android:text="@string/skip"
+        />
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/h_38"
+        android:layout_marginRight="@dimen/h_38"
+        android:layout_above="@+id/skip"
+        android:layout_marginBottom="@dimen/h_50"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/qq"
+            style="@style/remain_wrap"
+            android:src="@mipmap/ic_qq"
+            />
+
+        <ImageView
+            android:id="@+id/wx"
+            style="@style/remain_wrap"
+            android:src="@mipmap/ic_wx"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/other_login"
+        style="@style/wrap_wrap"
+        android:textSize="@dimen/text_11"
+        android:textColor="@color/text_main_color"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/footer"
+        android:layout_marginBottom="@dimen/v_26"
+        android:text="@string/other_login"
+        />
+
+    <View style="@style/line"
+        android:layout_alignBottom="@+id/other_login"
+        android:layout_toLeftOf="@+id/other_login"
+        android:layout_marginBottom="@dimen/v_6"
+        android:layout_marginLeft="@dimen/h_38"
+        android:layout_marginRight="@dimen/h_5"
+        />
+
+    <View style="@style/line"
+        android:layout_alignBottom="@+id/other_login"
+        android:layout_toRightOf="@+id/other_login"
+        android:layout_marginBottom="@dimen/v_6"
+        android:layout_marginLeft="@dimen/h_5"
+        android:layout_marginRight="@dimen/h_38"
+        />
+
+
+</RelativeLayout>

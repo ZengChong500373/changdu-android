@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:navigationIcon="@drawable/arrow_back">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="nihao"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/sp_17" />
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/h_120"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/tv_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/h_15"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sp_16" />
+
+                <View style="@style/line2" />
+
+                <LinearLayout
+                    android:id="@+id/ll_theme1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_theme_title1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/h_15"
+                        android:paddingTop="@dimen/h_15"
+                        android:paddingRight="@dimen/h_15"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/sp_18" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_theme1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                     <View
+                         android:layout_width="match_parent"
+                         android:layout_height="@dimen/h_8"/>
+                    <View style="@style/line2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_theme2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_theme_title2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/h_15"
+                        android:paddingTop="@dimen/h_15"
+                        android:paddingRight="@dimen/h_15"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/sp_18" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_theme2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/h_10"
+                        android:paddingRight="@dimen/h_7" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <org.linyi.base.ui.weidgt.TempView
+            android:id="@+id/tempView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+
+</LinearLayout>

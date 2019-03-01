@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/line_color2"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_toolbar_normal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/h_15"
+            android:paddingRight="@dimen/h_15"
+           >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_tab_shelf"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp_17"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/img_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/main_search" />
+
+            <ImageView
+                android:id="@+id/img_welfare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/h_20"
+                android:layout_toLeftOf="@id/img_search"
+                android:src="@drawable/main_welfare" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rl_toolbar_batch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/batch_management"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp_17" />
+
+            <TextView
+
+                android:id="@+id/tv_all_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/h_15"
+                android:text="@string/all_select"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h_1"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/main_shelf_broad"
+        android:drawablePadding="@dimen/h_10"
+        android:paddingLeft="@dimen/h_15"
+        android:paddingTop="@dimen/h_12"
+        android:paddingBottom="@dimen/h_12"
+        android:text="@string/shelf_welfare_hint"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/sp_13" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh_shelf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableAutoLoadMore="false"
+        app:srlEnableLoadMore="true">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlClassicsSpinnerStyle="FixedBehind"
+            app:srlDrawableArrowSize="20dp"
+            app:srlDrawableMarginRight="20dp"
+            app:srlDrawableProgress="@drawable/main_tab_shelf_normal"
+            app:srlDrawableProgressSize="20dp"
+            app:srlEnableLastTime="true"
+            app:srlFinishDuration="500"
+            app:srlTextSizeTime="10dp"
+            app:srlTextSizeTitle="16sp"
+            app:srlTextTimeMarginTop="2dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_shelf"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            tools:listitem="@android:layout/simple_list_item_2" />
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+
+            android:layout_width="@dimen/h_195"
+            android:layout_height="@dimen/h_157"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/h_106"
+            android:background="@drawable/main_shelf_empty" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/h_18"
+            android:text="@string/shelf_empty_describe"
+            android:textColor="@color/text_color_gray"
+            android:textSize="@dimen/sp_14" />
+
+        <Button
+            android:id="@+id/bt_go_stack"
+            android:layout_width="@dimen/h_240"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/h_40"
+            android:background="@drawable/orange_selector"
+            android:enabled="true"
+            android:paddingTop="@dimen/h_10"
+            android:paddingBottom="@dimen/h_10"
+            android:text="@string/go_stack"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>
+
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/wrap_wrap"
+        android:textSize="@dimen/text_15"
+        android:textColor="@color/text_dark_color"
+        android:text="@string/faq"
+        android:layout_marginLeft="@dimen/h_17"
+        android:layout_marginTop="@dimen/v_10"
+        />
+
+    <EditText
+        android:id="@+id/edit"
+        style="@style/edit_single"
+        android:lines="8"
+        android:lineSpacingMultiplier="1.3"
+        android:singleLine="false"
+        android:gravity="top|left"
+        android:background="@drawable/shape_white_round"
+        android:layout_margin="@dimen/h_15"
+        />
+
+
+    <org.linyi.ui.text.StateButton
+        android:id="@+id/enter"
+        style="@style/btn_primary_semicircle"
+        android:layout_height="@dimen/tab_height"
+        android:gravity="left|top"
+        android:text="@string/submit"
+        android:layout_marginTop="@dimen/v_34"
+        android:layout_marginLeft="@dimen/h_15"
+        android:layout_marginRight="@dimen/h_15"
+        android:enabled="false"
+        />
+
+</LinearLayout>

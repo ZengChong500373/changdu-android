@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <TextView style="@style/wrap_wrap"
+        android:textColor="@color/text_dark_color"
+        android:textSize="@dimen/text_23"
+        android:text="@string/check_preference"
+        android:layout_marginTop="@dimen/v_65"
+        />
+
+    <com.linyi.viva.extra.ui.weidgt.NoScrollGridView
+        android:id="@+id/grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/v_120"
+        android:layout_marginLeft="@dimen/h_30"
+        android:layout_marginRight="@dimen/h_30"
+        android:numColumns="3"
+        android:horizontalSpacing="@dimen/h_17"
+        android:verticalSpacing="@dimen/h_17"
+        />
+
+    <org.linyi.ui.text.StateButton
+        android:id="@+id/enter"
+        style="@style/btn_primary_semicircle"
+        android:layout_height="@dimen/tab_height"
+        android:layout_marginLeft="@dimen/h_90"
+        android:layout_marginRight="@dimen/h_90"
+        android:layout_marginTop="@dimen/v_60"
+        android:text="@string/start_read"
+        />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/skip"
+        style="@style/wrap_wrap"
+        android:text="@string/skip"
+        android:textSize="@dimen/text_19"
+        android:layout_marginBottom="@dimen/v_39"
+        android:textColor="@color/text_gray_color"
+        android:visibility="gone"
+        />
+
+</LinearLayout>

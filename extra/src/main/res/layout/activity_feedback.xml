@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <RadioGroup
+        android:id="@+id/tab_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/faq"
+            android:text="@string/faq"
+            android:drawableTop="@drawable/selector_feedback_faq"
+            android:checked="true"
+            style="@style/feedback_tab" />
+
+        <RadioButton
+            android:id="@+id/get_book_area"
+            android:text="@string/get_book_area"
+            android:drawableTop="@drawable/selector_feedback_book"
+            style="@style/feedback_tab" />
+
+        <RadioButton
+            android:id="@+id/contact"
+            android:text="@string/contact"
+            android:drawableTop="@drawable/selector_feedback_contact"
+            style="@style/feedback_tab" />
+
+    </RadioGroup>
+
+    <org.linyi.ui.CommonViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:background="@mipmap/launcher"
+        />
+
+    <com.linyi.viva.extra.ui.weidgt.count_down_btn.JumpBt
+        android:id="@+id/jumpBt"
+        android:layout_width="@dimen/h_50"
+        android:layout_height="@dimen/h_50"
+        android:layout_gravity="right"
+        android:layout_margin="@dimen/h_30"
+        android:visibility="gone"
+        app:jump_text_color="@color/colorPrimary"
+        app:jump_text="@string/skip"
+        />
+
+    <org.linyi.base.ui.weidgt.TempView
+        android:id="@+id/tempView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>

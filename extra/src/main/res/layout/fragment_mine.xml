@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/v_129"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="@dimen/v_60"
+            android:layout_height="@dimen/v_60"
+            android:src="@mipmap/ic_avatar_default"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/h_14"
+            android:background="@drawable/shape_white_circle"
+            android:padding="@dimen/h_2"
+            />
+
+        <TextView
+            android:id="@+id/nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_17"
+            android:layout_toRightOf="@+id/avatar"
+            android:layout_alignTop="@+id/avatar"
+            android:layout_marginTop="@dimen/v_8"
+            android:layout_marginLeft="@dimen/h_16"
+            android:layout_marginRight="@dimen/h_16"
+            android:singleLine="true"
+            android:ellipsize="end"
+            />
+
+        <TextView
+            android:id="@+id/userID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_10"
+            android:layout_toRightOf="@+id/avatar"
+            android:layout_alignBottom="@+id/avatar"
+            android:layout_marginBottom="@dimen/v_8"
+            android:layout_marginLeft="@dimen/h_16"
+            android:layout_marginRight="@dimen/h_16"
+            android:singleLine="true"
+            android:ellipsize="end"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/v_55"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <org.linyi.ui.text.SingleCenterTextView
+            android:id="@+id/level"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_exp"
+            android:drawablePadding="@dimen/h_7"
+            android:layout_gravity="center_vertical"
+            />
+
+        <View style="@style/line_v"
+            android:layout_marginTop="@dimen/v_17"
+            android:layout_marginBottom="@dimen/v_17" />
+
+        <org.linyi.ui.text.SingleCenterTextView
+            android:id="@+id/coin"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_coin2"
+            android:drawablePadding="@dimen/h_7"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_size" />
+
+    <TextView
+        android:id="@+id/level_exp"
+        style="@style/item_mine"
+        android:text="@string/level_exp"
+        android:drawableLeft="@mipmap/ic_level"
+        />
+
+    <View style="@style/line" />
+
+    <TextView
+        android:id="@+id/account_center"
+        style="@style/item_mine"
+        android:text="@string/account_center"
+        android:drawableLeft="@mipmap/ic_account"
+        />
+
+    <View style="@style/line" />
+
+    <TextView
+        android:id="@+id/history_record"
+        style="@style/item_mine"
+        android:text="@string/history_record"
+        android:drawableLeft="@mipmap/ic_history"
+        />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/space_size" />
+
+    <TextView
+        android:id="@+id/help_feedback"
+        style="@style/item_mine"
+        android:text="@string/help_feedback"
+        android:drawableLeft="@mipmap/ic_help"
+        />
+
+    <View style="@style/line" />
+
+    <TextView
+        android:id="@+id/setup"
+        style="@style/item_mine"
+        android:text="@string/setup"
+        android:drawableLeft="@mipmap/ic_setting"
+        />
+
+</LinearLayout>

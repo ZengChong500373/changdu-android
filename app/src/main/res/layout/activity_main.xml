@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <org.linyi.ui.TabViewpager
+        android:id="@+id/vp_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="100" />
+
+    <RadioGroup
+        android:background="@color/white"
+        android:id="@+id/rg_main_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rg_shelf"
+            style="@style/main_tab_bottom"
+            android:drawableTop="@drawable/main_tab_shelf_selector"
+            android:checked="true"
+            android:onClick="shelf"
+            android:text="@string/main_tab_shelf" />
+
+        <RadioButton
+            android:id="@+id/rg_stack"
+            style="@style/main_tab_bottom"
+            android:onClick="stack"
+            android:checked="false"
+            android:drawableTop="@drawable/main_tab_stack_selector"
+            android:text="@string/main_tab_stack" />
+
+        <RadioButton
+            android:id="@+id/rg_mine"
+            style="@style/main_tab_bottom"
+            android:onClick="mine"
+            android:checked="false"
+            android:drawableTop="@drawable/main_tab_mine_selector"
+            android:text="@string/main_tab_mine" />
+    </RadioGroup>
+
+</LinearLayout>

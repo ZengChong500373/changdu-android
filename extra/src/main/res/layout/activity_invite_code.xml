@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <EditText
+        android:id="@+id/invite_code"
+        style="@style/edit_single"
+        android:layout_height="@dimen/v_50"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/space_size"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/h_20"
+        android:paddingRight="@dimen/h_20"
+        android:hint="@string/input_invite_code"
+        />
+
+    <TextView
+        android:id="@+id/enter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/v_45"
+        android:text="@string/enter"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/v_30"
+        android:layout_marginLeft="@dimen/h_45"
+        android:layout_marginRight="@dimen/h_45"
+        android:background="@drawable/selector_primary_semicircle"
+        />
+
+</LinearLayout>
+

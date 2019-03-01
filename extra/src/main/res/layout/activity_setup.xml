@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_size" />
+
+    <com.linyi.viva.extra.ui.weidgt.IconTextView
+        android:id="@+id/clear_cache"
+        style="@style/item_setup"
+        android:text="@string/clear_cache"
+        android:drawableRight="@mipmap/ic_enter"
+        />
+
+    <com.linyi.viva.extra.ui.weidgt.IconTextView
+        android:id="@+id/night_mode"
+        style="@style/item_setup"
+        android:text="@string/night_mode"
+        android:visibility="gone"
+        />
+
+    <com.linyi.viva.extra.ui.weidgt.IconTextView
+        android:id="@+id/version_update"
+        style="@style/item_setup"
+        android:text="@string/version_update"
+        android:drawableRight="@mipmap/ic_enter"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/auto_subscribe"
+            style="@style/item_setup"
+            android:text="@string/auto_subscribe"
+            android:drawableRight="@null"
+            />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/sc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="@dimen/h_16"/>
+
+    </FrameLayout>
+
+    <View style="@style/line" />
+
+    <com.linyi.viva.extra.ui.weidgt.IconTextView
+        android:id="@+id/switch_account"
+        style="@style/item_setup"
+        android:text="@string/switch_account"
+        android:drawableRight="@mipmap/ic_enter"
+        android:visibility="gone"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_size"
+        android:visibility="gone"/>
+
+    <com.linyi.viva.extra.ui.weidgt.IconTextView
+        android:id="@+id/login_out"
+        style="@style/item_setup"
+        android:text="@string/login_out"
+        android:visibility="gone"
+        />
+
+</LinearLayout>

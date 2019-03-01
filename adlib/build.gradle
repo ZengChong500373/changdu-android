@@ -1,0 +1,24 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION as int
+    defaultConfig {
+        minSdkVersion MIN_SDK_VERSION as int
+        targetSdkVersion TARGET_SDK_VERSION as int
+        versionCode VERSION_CODE as int
+        versionName VERSION_NAME as String
+        multiDexEnabled true
+    }
+}
+
+dependencies {
+
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':base')
+
+    implementation 'com.google.android.gms:play-services-ads:17.1.1'
+//    implementation 'com.google.firebase:firebase-core:15.0.1'
+//    implementation 'com.google.firebase:firebase-core:+'
+//    implementation 'com.google.firebase:firebase-messaging:+'
+
+}

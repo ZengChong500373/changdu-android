@@ -1,0 +1,92 @@
+syntax = "proto3";
+option java_package = "com.api.changdu.proto";
+option java_outer_classname = "MissionApi";
+/////////////////////////////////////////【任务接口】///////////////////////////////////////////////////
+//任务积分增减类型（消耗不用处理）
+enum MissionType {
+    FOO6 = 0;                                       //占位
+    CHECK_IN_DAY = 1;                               //签到（获得）
+    GAME = 2;                                       //老虎机（获得）
+    VIDEO = 3;                                      //视频（获得）
+    INVITE = 4;                                     //分享邀请码（获得）
+    REDEMPTION = 5;                                 //兑换（获得）
+    COST = 6;                                       //购买章节（消耗）
+}
+
+//拓展信息
+message ExtInfo {
+    int32 inviteNum = 1;                            //邀请的人数
+    int32 inviteScore = 2;                          //邀请所得积分
+    int32 totalScore = 3;                           //总积分
+    int32 checkInDay = 4;                           //签到的天数(0:表示从未签到,1-7表示连续签到的天数)
+    bool todayIsCheck = 5;                          //今日是否已经签到
+    repeated int32 checkInDays = 6;                 //签到奖励
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+//任务列表(v1/mission/list)
+message ReqMissionList {
+}
+
+message AckMissionList {
+    ExtInfo extInfo = 1;
+    repeated Mission mission = 2;                   //任务列表
+    message Mission{
+        string name = 1; 				            //名称
+        MissionType missionType = 2;                //任务类型
+        string introduce = 3; 			            //描述，按钮里面的内容
+        string iconUrl = 4;                         //图标地址
+        bool isShowDouble = 5;                      //是否显示翻倍
+        int32 cd = 6;					            //cd以秒算(单位:秒)
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+//完成任务(v1/mission/finish)
+message ReqMissionFinish {
+    MissionType missionType = 1;	                //任务类型
+    string code = 2;                                //邀请码（传missionType.INVITE此值必填）
+}
+
+message AckMissionFinish {
+    MissionType missionType = 1;	                //任务类型
+    int32 score = 2;                                //本次的积分
+    int32 exp = 3;                                  //本次的经验
+    string code = 4;                                //串码
+    int32 cd = 5;						            //cd以秒算(单位:秒)
+    bool canDoubleScore = 6;                        //该数据是否可以翻倍
+    bool isShowAd = 7;                              //是否显示广告
+    bool isMax = 8;                                 //用户积分是否已达上限
+    ExtInfo extInfo = 9;                            //拓展信息
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+//积分翻倍(v1/mission/double)
+message ReqMissionDoubleScore {
+    string code = 1;                                //AckMissionFinish的串码
+}
+
+message AckMissionDoubleScore {
+    MissionType missionType = 1;	                //任务类型
+    int32 score = 2;                                //翻倍之后的积分，返回0就是不处理的数据
+    bool isShowAd = 3;                              //是否显示广告
+    bool isMax = 4;                                 //用户积分是否已达上限
+    ExtInfo extInfo = 5;                            //拓展信息
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+//积分获取记录(v1/mission/log)
+message ReqScoreLog {
+    int32 currentPage = 1;                          //当前第几页,数据从1开始,1表示第一页
+    int32 pageSize = 2;                             //每页多少条
+    bool isAdd = 3;                                 //积分增减类型 true:增加 false:减少
+}
+
+message AckScoreLog {
+    repeated ScoreChange scoreChange = 1;
+    message ScoreChange {
+        string name = 1;                            //任务名称/书名
+        int32 num = 2;                              //增减数量
+        int32 time = 3;                             //时间
+    }
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView style="@style/wrap_wrap"
+        android:textSize="@dimen/text_15"
+        android:textColor="@color/text_dark_color"
+        android:text="@string/more_feedback"
+        android:layout_marginLeft="@dimen/h_15"
+        android:layout_marginTop="@dimen/v_10"
+        android:layout_marginBottom="@dimen/v_20"
+        />
+
+    <com.linyi.viva.extra.ui.weidgt.IconTextView
+        android:id="@+id/contact_qq"
+        style="@style/feedback_contact_tab"
+        android:text="@string/contact_qq"
+        />
+
+    <com.linyi.viva.extra.ui.weidgt.IconTextView
+        android:id="@+id/contact_wechat"
+        style="@style/feedback_contact_tab"
+        android:text="@string/contact_wechat"
+        />
+
+    <com.linyi.viva.extra.ui.weidgt.IconTextView
+        android:id="@+id/contact_email"
+        style="@style/feedback_contact_tab"
+        android:text="@string/contact_email"
+        />
+
+</LinearLayout>

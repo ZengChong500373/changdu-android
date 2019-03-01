@@ -1,0 +1,43 @@
+<resources>
+
+    <!-- 多形态按钮 -->
+    <declare-styleable name="StateButton">
+        <attr name="pressColor" format="color" />
+        <attr name="disableColor" format="color" />
+        <attr name="enableColor" format="color" />
+        <attr name="pressTextColor" format="color" />
+        <attr name="disableTextColor" format="color" />
+        <attr name="enableTextColor" format="color" />
+        <attr name="empty" format="boolean" />
+        <!-- 是否开启按下去的状态 默认true -->
+        <attr name="enablePressState" format="boolean" />
+        <!-- 是否开启不可点击的状态 默认true -->
+        <attr name="enableDisableState" format="boolean" />
+        <!-- 是否拦截不可点击时的点击事件 默认false(不可点击时仍会收到点击事件) -->
+        <attr name="isInterceptDisable" format="boolean" />
+        <attr name="round" format="reference|dimension" />
+        <attr name="lineSize" format="reference|dimension" />
+        <attr name="roundOrientation" format="enum">
+            <!-- 同：com.rwz.commonmodule.config.Orientation -->
+            <enum name="left" value="0" />
+            <enum name="top" value="1" />
+            <enum name="right" value="2" />
+            <enum name="bottom" value="4" />
+            <enum name="all" value="8" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="AutoFlowLayout">
+        <attr name="singleLine" format="boolean"></attr>
+        <attr name="maxLines" format="integer"></attr>
+        <attr name="multiChecked" format="boolean"></attr>
+        <attr name="horizontalSpace" format="dimension"></attr>
+        <attr name="verticalSpace" format="dimension"></attr>
+        <attr name="columnNumbers" format="integer"></attr>
+        <attr name="rowNumbers" format="integer"></attr>
+        <attr name="cutLineWidth" format="dimension"></attr>
+        <attr name="cutLineColor" format="color"></attr>
+        <attr name="cutLine" format="boolean"></attr>
+        <attr name="lineCenter" format="boolean"></attr>
+    </declare-styleable>
+</resources>

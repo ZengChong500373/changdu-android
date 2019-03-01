@@ -1,0 +1,21 @@
+<resources>
+
+    <color name="invite_friend_round">#F2FAFF</color>
+    <color name="more_share">#930202</color>
+    <color name="signed_tips">#FDBD22</color>
+    <color name="luck_turn_bottom_bg">#E7313A</color>
+    <color name="scroll_bg">#B80000</color>
+    <color name="scroll_gradient">#EB9570</color>
+    <color name="guide_go_on" >#4aacff</color>
+    <color name="coin_text" >#FFD75E</color>
+    <color name="ic_reward_header_fg_color" >#e7313a</color>
+
+    <color name="signed_item_text">#d6d6d6</color>
+    <color name="signed_item_bg">#f6f6f6</color>
+    <color name="signed_num">#FDB437</color>
+    <color name="share_pink_text">#FFBFBF</color>
+    <color name="share_color_primary">#E73131</color>
+    <color name="share_line">#FF6969</color>
+
+
+</resources>

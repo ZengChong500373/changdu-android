@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_read_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true">
+
+    <include layout="@layout/layout_reader_toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/layout_page_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/mask_color"
+        android:orientation="vertical">
+
+        <CheckedTextView
+            android:id="@+id/simulation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/v_60"
+            android:textSize="@dimen/text_14"
+            android:textColor="@color/white"
+            android:text="@string/turn_simulation"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/reader_setting_margin"
+            />
+
+        <View style="@style/line"
+            android:background="@color/reader_line"/>
+
+        <CheckedTextView
+            android:id="@+id/cover"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/v_60"
+            android:textSize="@dimen/text_14"
+            android:textColor="@color/white"
+            android:text="@string/turn_cover"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/reader_setting_margin"
+            />
+
+        <View style="@style/line"
+            android:background="@color/reader_line"/>
+
+        <CheckedTextView
+            android:id="@+id/none"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/v_60"
+            android:textSize="@dimen/text_14"
+            android:textColor="@color/white"
+            android:text="@string/turn_none"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/reader_setting_margin"
+            />
+    </LinearLayout>
+
+</FrameLayout>

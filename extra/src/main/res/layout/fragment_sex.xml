@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <TextView style="@style/wrap_wrap"
+        android:textColor="@color/text_dark_color"
+        android:textSize="@dimen/text_23"
+        android:text="@string/check_sex"
+        android:layout_marginTop="@dimen/v_65"
+        />
+
+    <TextView
+        android:id="@+id/boy"
+        style="@style/wrap_wrap"
+        android:layout_marginTop="@dimen/v_40"
+        android:textColor="@color/text_dark_color"
+        android:textSize="@dimen/text_19"
+        android:text="@string/boy"
+        android:drawableTop="@mipmap/ic_boy"
+        android:gravity="center_horizontal"
+        android:drawablePadding="@dimen/v_17"
+        />
+
+    <org.linyi.ui.text.SingleCenterTextView
+        android:id="@+id/girl"
+        style="@style/wrap_wrap"
+        android:layout_marginTop="@dimen/v_40"
+        android:textColor="@color/text_dark_color"
+        android:textSize="@dimen/text_19"
+        android:text="@string/girl"
+        android:drawableTop="@mipmap/ic_girl"
+        android:gravity="center_horizontal"
+        android:drawablePadding="@dimen/v_17"
+        />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/skip"
+        style="@style/wrap_wrap"
+        android:textColor="@color/text_gray_color"
+        android:textSize="@dimen/text_19"
+        android:text="@string/skip"
+        android:layout_marginBottom="@dimen/v_39"
+        />
+
+</LinearLayout>

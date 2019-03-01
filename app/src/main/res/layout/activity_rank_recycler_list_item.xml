@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/h_15"
+    android:paddingTop="@dimen/h_12"
+    android:paddingRight="@dimen/h_12"
+    android:paddingBottom="@dimen/h_12">
+
+    <ImageView
+        android:id="@+id/img_cover"
+        android:scaleType="centerCrop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/h_18"
+        android:layout_toRightOf="@id/img_cover"
+        android:text="美女相国相国相国相国相国相国"
+        android:maxEms="4"
+        android:textColor="@color/text_color"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="@dimen/sp_15" />
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_title"
+        android:layout_marginLeft="@dimen/h_9"
+        android:layout_toRightOf="@id/tv_title"
+        android:maxLines="1"
+        android:text="玄幻"
+        android:textSize="@dimen/sp_10" />
+
+    <TextView
+        android:id="@+id/tv_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_marginLeft="@dimen/h_18"
+        android:layout_marginTop="@dimen/h_5"
+        android:layout_toRightOf="@id/img_cover"
+        android:text="辰东"
+        android:textColor="@color/text_color_gray"
+        android:textSize="@dimen/sp_11" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_author"
+        android:layout_marginLeft="@dimen/h_18"
+        android:layout_marginTop="@dimen/h_4"
+        android:layout_toRightOf="@id/img_cover"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="在破败中崛起，在寂静中权势滔天..."
+        android:textColor="@color/text_color_gray"
+        android:textSize="@dimen/sp_11" />
+
+    <TextView
+        android:id="@+id/tv_read_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_description"
+        android:layout_marginLeft="@dimen/h_18"
+        android:layout_marginTop="@dimen/h_3"
+        android:layout_toRightOf="@id/img_cover"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="3234阅读"
+        android:textColor="@color/text_color_gray"
+        android:textSize="@dimen/sp_11" />
+
+    <TextView
+        android:id="@+id/tv_rank"
+        android:paddingLeft="@dimen/h_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="TOP1"
+        android:textStyle="bold" />
+
+</RelativeLayout>

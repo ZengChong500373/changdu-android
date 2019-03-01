@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/h_57"
+    android:layout_marginLeft="@dimen/h_12"
+    android:layout_marginTop="@dimen/h_12">
+
+    <ImageView
+        android:id="@+id/img_cover"
+        android:layout_width="@dimen/h_43"
+        android:layout_height="@dimen/h_57"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/view_center"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginBottom="@dimen/h_2"
+        android:layout_toRightOf="@id/img_cover"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="你好"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/tv_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_center"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_marginTop="@dimen/h_2"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_toRightOf="@id/img_cover"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="今天天气不错"
+        android:textColor="@color/text_color_gray"
+        android:textSize="@dimen/sp_11" />
+
+    <View
+        android:id="@+id/view_center"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true" />
+</RelativeLayout>

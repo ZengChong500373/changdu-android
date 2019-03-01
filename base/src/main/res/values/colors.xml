@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF6349</color>
+    <color name="colorPrimaryDark">#dd4036</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <color name="text_hint">#eee</color>
+    <color name="text_gray_color">#999</color>
+    <color name="text_main_color">#666</color>
+    <color name="text_dark_color">#333</color>
+
+    <color name="line_color">#DDDDDD</color>
+    <color name="line_color2">#F6F6F6</color>
+    <color name="background_color">#f2f2f2</color>
+    <color name="background_gray">#ccc</color>
+    <!-- 页面加载loading背景色 -->
+    <color name="loading_bg">#444</color>
+    <!-- 经验浅色背景 -->
+    <color name="level_bg_one">#F8EEEC</color>
+    <color name="level_bg_two">#FAE7E3</color>
+
+    <color name="background_light">#F5F7FA</color>
+
+
+    <!-- 带透明度的色值 -->
+    <color name="color_black_trans_10">#19000000</color>
+    <color name="color_black_trans_20">#30000000</color>
+    <color name="color_black_trans_30">#4d000000</color>
+    <color name="color_black_trans_35">#8a000000</color>
+    <color name="color_black_trans_40">#66000000</color>
+    <color name="color_black_trans_50">#7f000000</color>
+    <color name="color_black_trans_60">#99000000</color>
+    <color name="color_black_trans_70">#b2000000</color>
+    <color name="color_black_trans_75">#c0000000</color>
+    <color name="color_black_trans_80">#cc000000</color>
+    <color name="color_black_trans_90">#e5000000</color>
+
+</resources>

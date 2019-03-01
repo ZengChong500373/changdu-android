@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="activity_horizontal_margin">@dimen/h_16</dimen>
+    <dimen name="activity_vertical_margin">@dimen/h_16</dimen>
+    <!-- tab高度 -->
+    <dimen name="tab_height">@dimen/v_45</dimen>
+    <!-- 线条尺寸 -->
+    <dimen name="line_size">@dimen/v_0_5</dimen>
+    <!-- 半圆半径，是一个相对值，并不唯一，只要比控件一半高即可 -->
+    <dimen name="semicircle">@dimen/h_50</dimen>
+    <!-- 分割条 -->
+    <dimen name="space_size">@dimen/v_10</dimen>
+    <!-- toolbar高度 -->
+    <dimen name="tool_bar_height">@dimen/h_44</dimen>
+    <!-- dialog最小宽度 -->
+    <dimen name="dialog_min_width">@dimen/h_300</dimen>
+    <!-- 正在加载中 loading尺寸 -->
+    <dimen name="temp_loading_size">@dimen/h_120</dimen>
+
+</resources>

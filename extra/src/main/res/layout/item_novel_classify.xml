@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/h_8">
+
+    <CheckedTextView
+        android:id="@+id/name"
+        style="@style/match_wrap"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_14"
+        android:textColor="@color/selector_primary_dark"
+        android:background="@drawable/selector_primary_semicircle_empty"
+        android:checked="false"
+        android:paddingTop="@dimen/v_10"
+        android:paddingBottom="@dimen/v_10"
+        />
+
+    <ImageView
+        android:id="@+id/flag"
+        android:layout_width="@dimen/h_14"
+        android:layout_height="@dimen/h_14"
+        android:layout_gravity="right|top"
+        android:src="@drawable/main_shelf_delect_selected"
+        android:visibility="gone"
+        />
+
+</FrameLayout>

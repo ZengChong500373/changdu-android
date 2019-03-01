@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_white_bg"
+        android:minWidth="@dimen/dialog_min_width"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="@dimen/h_29"
+            android:paddingBottom="@dimen/h_21"
+            android:textColor="@color/text_dark_color"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_17" />
+
+        <TextView
+            android:id="@+id/msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/h_18"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.2"
+            android:minLines="2"
+            android:textColor="@color/text_gray_color"
+            android:textSize="@dimen/text_14" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/v_24"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/v_40"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/h_3"
+                android:gravity="center"
+                android:textColor="@color/text_dark_color"
+                android:textSize="@dimen/text_16"
+                android:background="@drawable/selector_light_semicircle"
+                />
+
+            <TextView
+                android:id="@+id/enter"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/v_40"
+                android:layout_marginLeft="@dimen/h_3"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_16"
+                android:background="@drawable/selector_primary_semicircle"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/levelHeaderContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+        <TextView style="@style/wrap_wrap"
+            android:textSize="@dimen/text_12"
+            android:textColor="@color/text_gray_color"
+            android:layout_marginLeft="@dimen/h_15"
+            android:layout_marginTop="@dimen/v_12"
+            android:layout_marginBottom="@dimen/v_12"
+            android:text="@string/level_sp_table"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/v_40"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/h_15"
+            android:layout_marginRight="@dimen/h_15"
+            android:background="@color/colorPrimary">
+
+            <TextView style="@style/remain_wrap"
+                android:textSize="@dimen/text_12"
+                android:textColor="@color/white"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_vertical"
+                android:text="@string/level"
+                />
+
+            <TextView style="@style/remain_wrap"
+                android:textSize="@dimen/text_12"
+                android:textColor="@color/white"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_vertical"
+                android:text="@string/coin_ceiling"
+                />
+
+        </LinearLayout>
+
+        <ScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/levelFooterContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/h_15"
+                android:layout_marginRight="@dimen/h_15"
+                android:orientation="vertical"/>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

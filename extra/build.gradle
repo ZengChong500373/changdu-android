@@ -1,0 +1,27 @@
+apply plugin: 'com.android.library'
+//apply plugin: 'com.android.application'
+
+android {
+
+    compileSdkVersion COMPILE_SDK_VERSION as int
+    defaultConfig {
+        minSdkVersion MIN_SDK_VERSION as int
+        targetSdkVersion TARGET_SDK_VERSION as int
+        versionCode VERSION_CODE as int
+        versionName VERSION_NAME as String
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(':base')
+    implementation project(':ui')
+    //广告
+    implementation project(':adlib')
+
+    //微信sdk
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+}

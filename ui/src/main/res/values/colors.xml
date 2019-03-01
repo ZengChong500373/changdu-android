@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffff</color>
+    <color name="news_tablayout_default">#d0d9ff</color>
+    <color name="darker_gray">#aaa</color>
+
+
+    <color name="text_color">#333333</color>
+    <color name="text_color_orange">#FF6349</color>
+    <color name="text_color_gray">#999999</color>
+    <color name="text_color_6">#666666</color>
+    <color name="text_color_b">#bbbbbb</color>
+    <color name="black">#000</color>
+</resources>

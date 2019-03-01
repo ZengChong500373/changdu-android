@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 屏幕宽度，非真实 -->
+    <dimen name="screen_width">@dimen/h_800</dimen>
+
+    <integer name="red_packet_close_anim_duration">500</integer>
+    <integer name="red_packet_open_anim_duration">1000</integer>
+
+</resources>

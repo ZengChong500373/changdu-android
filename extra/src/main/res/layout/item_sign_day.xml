@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckedTextView
+        android:id="@+id/circle"
+        android:layout_width="@dimen/h_30"
+        android:layout_height="@dimen/h_30"
+        android:textSize="@dimen/text_12"
+        android:textColor="@color/signed_item_text"
+        android:background="@drawable/selector_sign_day"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/point"
+        style="@style/wrap_wrap"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/v_42"
+        />
+
+</FrameLayout>

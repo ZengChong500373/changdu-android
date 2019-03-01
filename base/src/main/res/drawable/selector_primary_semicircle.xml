@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_enabled="false">
+        <shape>
+            <corners android:radius="@dimen/semicircle" />
+
+            <solid android:color="@color/background_gray" />
+        </shape>
+    </item>
+
+
+    <item android:state_pressed="true">
+        <shape>
+            <corners android:radius="@dimen/semicircle" />
+
+            <solid android:color="@color/colorPrimaryDark" />
+        </shape>
+    </item>
+
+    <item>
+        <shape>
+            <corners android:radius="@dimen/semicircle" />
+
+            <solid android:color="@color/colorPrimary" />
+
+        </shape>
+    </item>
+
+</selector>

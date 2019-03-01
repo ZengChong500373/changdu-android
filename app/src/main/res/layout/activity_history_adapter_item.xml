@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/h_1"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/h_15"
+    android:paddingTop="@dimen/h_12"
+    android:paddingRight="@dimen/h_12"
+    android:paddingBottom="@dimen/h_12">
+
+    <ImageView
+        android:id="@+id/img_cover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/h_18"
+        android:layout_toRightOf="@id/img_cover"
+        android:text="美女相国"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/sp_15" />
+
+    <TextView
+        android:id="@+id/tv_read_chapter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/h_18"
+        android:layout_toRightOf="@id/img_cover"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="邪心未泯"
+        android:textSize="@dimen/sp_11" />
+
+    <TextView
+        android:id="@+id/tv_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_read_chapter"
+        android:layout_marginLeft="@dimen/h_18"
+        android:layout_marginTop="@dimen/h_12"
+        android:layout_toRightOf="@id/img_cover"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="123阅读"
+        android:textSize="@dimen/sp_11" />
+
+    <TextView
+        android:id="@+id/tv_read_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_author"
+        android:layout_alignParentRight="true"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="123阅读"
+        android:textSize="@dimen/sp_11" />
+
+    <ImageView
+        android:id="@+id/img_select_status"
+        android:layout_width="@dimen/h_20"
+        android:layout_height="@dimen/h_20"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/h_5" />
+</RelativeLayout>

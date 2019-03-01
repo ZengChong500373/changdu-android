@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/tool_bar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/white"
+      app:navigationIcon="@drawable/arrow_back"
+      android:fitsSystemWindows="true"
+      app:layout_scrollFlags="scroll|enterAlways" >
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/sp_17" />
+  </android.support.v7.widget.Toolbar>
+  <com.flyco.tablayout.CommonTabLayout
+      android:id="@+id/tab_layout"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/v_48"
+      app:tl_textSelectColor="@color/text_color_orange"
+      app:tl_textUnselectColor="@color/text_color"
+      app:tl_indicator_color="@color/text_color_orange"
+      app:tl_iconVisible="false"
+      app:tl_textBold="SELECT"
+      app:tl_indicator_width="@dimen/h_17"
+      app:tl_textsize="@dimen/sp_14"/>
+
+
+  <android.support.v4.view.ViewPager
+      android:layout_marginTop="@dimen/h_10"
+      android:id="@+id/vp_classify"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior">
+  </android.support.v4.view.ViewPager>
+</LinearLayout>

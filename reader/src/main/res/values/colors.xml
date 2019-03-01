@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000</color>
+
+    <color name="mask_color">@color/black</color>
+
+    <color name="eye_care">#12ffff00</color>
+
+    <color name="night_text">#999999</color>
+    <color name="day_text">#ffffff</color>
+    <color name="seek_bar">#323232</color>
+    <color name="reader_line">#333</color>
+
+
+</resources>

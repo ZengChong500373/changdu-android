@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Reader</string>
+
+    <string name="num_of_chapter_default">%1$s/%2$s章</string>
+    <string name="num_of_page_default">%1$s/%2$s页</string>
+
+    <string name="directory">目录</string>
+    <string name="night_mode">夜间模式</string>
+    <string name="day_mode">日间模式</string>
+    <string name="cache">缓存</string>
+    <string name="setting">设置</string>
+
+    <string name="follow_sys">跟随系统</string>
+    <string name="custom_font">自定义字体</string>
+    <string name="custom_layout">自定义排版</string>
+    <string name="custom_bg">自定义背景</string>
+    <string name="eye_care_mode">护眼模式</string>
+    <string name="page_mode">翻页模式</string>
+    <string name="auto_read">自动阅读</string>
+    <string name="complex_chinese">繁体</string>
+
+    <string name="turn_simulation">仿真翻页</string>
+    <string name="turn_cover">左右翻页</string>
+    <string name="turn_none">无翻页动画</string>
+
+    <string name="no_setting_permission">没有授予修改系统设置权限,不能执行该操作</string>
+    <string name="not_support_now">暂不支持</string>
+    <string name="set_max_font_size">已设置最大字体</string>
+    <string name="set_min_font_size">已设置最小字体</string>
+
+    <string name="add_bookshelf">加入书架</string>
+    <string name="add_bookshelf_detail">喜欢这本书就加入书架吧？</string>
+
+    <string name="subscribe">订阅</string>
+    <string name="auto_subscribe">自动订阅</string>
+    <string name="enter_subscribe">订阅确定</string>
+    <string name="left_chapter_default">剩余章节：%d章</string>
+    <string name="balance">余额</string>
+    <string name="should_pay">应付</string>
+    <string name="balance_enough_handle_task">余额不足，去做任务</string>
+    <string name="not_subscribe_curr_chapter">您还未订阅此章节</string>
+    <string name="subscribed">已订阅</string>
+
+
+</resources>

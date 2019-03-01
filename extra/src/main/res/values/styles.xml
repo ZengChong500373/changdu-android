@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- dialog样式的activity -->
+    <style name="DialogActivityTheme" parent="Theme.AppCompat.Dialog">
+        <!-- 下面这两个是最重要的 -->
+        <!-- 是否浮现在activity之上 (内容会居中显示并靠左右有距离)-->
+        <item name="android:windowIsFloating">true</item>
+        <item name="windowActionBar">false</item>
+        <!-- 无标题 没有“android:”否则去不掉-->
+        <item name="windowNoTitle">true</item>
+        <!-- 设置透明下面两个一定要同时设置 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 设置模糊 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 去掉边框（测试时没发现其作用） -->
+        <item name="android:windowFrame">@null</item>
+    </style>
+
+    <style name="wrap_wrap">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="match_wrap">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="remain_wrap">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- 单行输入框 -->
+    <style name="edit_single" parent="match_wrap">
+        <item name="android:drawablePadding">@dimen/h_8</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="android:textColor">@color/text_dark_color</item>
+        <item name="android:textSize">@dimen/text_14</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:lines">1</item>
+        <item name="android:paddingTop">@dimen/v_10</item>
+        <item name="android:paddingBottom">@dimen/v_10</item>
+        <item name="android:paddingLeft">@dimen/v_20</item>
+        <item name="android:paddingRight">@dimen/v_20</item>
+        <item name="android:background">@drawable/shape_edit_single</item>
+    </style>
+
+    <!-- 按钮_ -->
+    <style name="btn_primary" parent="match_wrap">
+        <item name="android:textSize">@dimen/text_12</item>
+        <item name="android:layout_height">@dimen/tab_height</item>
+        <item name="enableColor">@color/colorPrimary</item>
+        <item name="pressColor">@color/colorPrimaryDark</item>
+        <item name="disableColor">@color/background_gray</item>
+        <item name="pressTextColor">@color/white</item>
+        <item name="disableTextColor">@color/white</item>
+        <item name="enableTextColor">@color/white</item>
+        <item name="empty">false</item>
+        <item name="roundOrientation">all</item>
+    </style>
+    <style name="btn_primary_semicircle" parent="btn_primary">
+        <item name="round">@dimen/semicircle</item>
+    </style>
+
+    <style name="item_setup">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/tab_height</item>
+        <item name="android:textColor">@color/text_dark_color</item>
+        <item name="android:textSize">@dimen/text_13</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/h_16</item>
+        <item name="android:paddingRight">@dimen/h_16</item>
+        <item name="android:drawablePadding">@dimen/h_11</item>
+        <item name="android:drawableRight">@mipmap/ic_enter</item>
+        <item name="android:background">@drawable/selector_comm_click</item>
+        <item name="right_text_color">@color/text_gray_color</item>
+        <item name="right_text_size">@dimen/text_13</item>
+        <item name="show_bottom_line">true</item>
+    </style>
+
+    <style name="item_mine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/v_50</item>
+        <item name="android:drawablePadding">@dimen/h_15</item>
+        <item name="android:paddingLeft">@dimen/h_15</item>
+        <item name="android:paddingRight">@dimen/h_15</item>
+        <item name="android:background">@drawable/selector_comm_click</item>
+        <item name="android:drawableRight">@mipmap/ic_enter</item>
+        <item name="android:textSize">@dimen/text_15</item>
+        <item name="android:textColor">@color/text_dark_color</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="benefit_bar_left" parent="wrap_wrap">
+        <item name="android:textColor">@color/text_gray_color</item>
+        <item name="android:textSize">@dimen/text_16</item>
+        <item name="android:drawablePadding">@dimen/h_8</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="benefit_bar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/v_65</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/selector_comm_click</item>
+    </style>
+
+    <style name="feedback_tab">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/selector_primary_gray</item>
+        <item name="android:button">@null</item>
+        <item name="android:textSize">@dimen/text_12</item>
+        <item name="android:drawablePadding">@dimen/v_9</item>
+        <item name="android:paddingTop">@dimen/v_16</item>
+        <item name="android:paddingBottom">@dimen/v_16</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="feedback_contact_tab">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/v_45</item>
+        <item name="android:paddingLeft">@dimen/h_15</item>
+        <item name="android:paddingRight">@dimen/h_15</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_14</item>
+        <item name="android:background">@drawable/selector_comm_click</item>
+        <item name="right_text_color">@color/black</item>
+        <item name="right_text_size">@dimen/text_14</item>
+        <item name="show_bottom_line">true</item>
+    </style>
+
+</resources>

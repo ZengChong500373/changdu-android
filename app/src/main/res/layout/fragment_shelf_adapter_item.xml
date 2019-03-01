@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/h_91"
+    android:layout_marginTop="@dimen/h_1"
+    android:background="@color/white"
+    android:id="@+id/rl"
+    android:paddingLeft="@dimen/h_15"
+    android:paddingTop="@dimen/h_12"
+    android:paddingBottom="@dimen/h_15"
+    android:paddingRight="@dimen/h_10"
+    >
+ <ImageView
+     android:id="@+id/img_book_cover"
+     android:layout_width="@dimen/h_50"
+     android:scaleType="centerCrop"
+     android:layout_height="@dimen/h_67" />
+    <TextView
+        android:id="@+id/tv_book_name"
+        android:layout_above="@id/view_center"
+        android:layout_toRightOf="@id/img_book_cover"
+        android:text="极乐宝典"
+        android:textSize="@dimen/sp_17"
+        android:layout_marginBottom="@dimen/h_2"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:textColor="@color/text_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginTop="@dimen/h_2"
+        android:layout_below="@id/view_center"
+        android:id="@+id/tv_book_describe"
+        android:layout_toRightOf="@id/img_book_cover"
+        android:textSize="@dimen/sp_13"
+        android:layout_marginRight="@dimen/h_35"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/text_color_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <View
+        android:id="@+id/book_status"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:background="@drawable/circular_shape"
+        android:layout_marginRight="@dimen/h_5"
+        android:layout_width="@dimen/h_10"
+        android:layout_height="@dimen/h_10" />
+   <ImageView
+       android:id="@+id/img_select_status"
+       android:layout_alignParentRight="true"
+       android:layout_centerVertical="true"
+       android:layout_marginRight="@dimen/h_5"
+       android:layout_width="@dimen/h_20"
+       android:layout_height="@dimen/h_20"/>
+    <View
+        android:id="@+id/view_center"
+        android:layout_centerInParent="true"
+        android:layout_width="1dp"
+        android:layout_height="1dp"/>
+    <View
+        android:layout_width="@dimen/h_10"
+        android:layout_height="@dimen/h_10"/>
+
+</RelativeLayout>

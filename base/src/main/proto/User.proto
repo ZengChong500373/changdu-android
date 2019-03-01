@@ -1,0 +1,133 @@
+syntax = "proto3";
+option java_package = "com.api.changdu.proto";
+option java_outer_classname = "UserApi";
+
+//第三方登录类型枚举
+enum LoginType{
+    FOO2 = 0;                                       //占位，不传
+    QQ = 1;                                         //QQ登录
+    WECHAT = 2;                                     //微信登录
+    PHONE = 3;                                      //手机号登录
+}
+
+//性别枚举
+enum Gender{
+    FOO4 = 0;                                       //占位
+    MALE = 1;                                       //男
+    FEMALE = 2;                                     //女
+    SECRECY = 3;                                    //保密
+}
+//----------------------------------------------------------------------------------------
+//设备登录（v1/user/deviceLogin）
+//--请求ReqDeviceLogin
+//--响应AckDeviceLogin
+message ReqDeviceLogin{
+    string deviceID = 1;                            //设备内码
+    string brand = 2;                               //手机品牌
+    string modal = 3;                               //手机型号
+    string systemVersion = 4;                       //操作系统版本
+    string packageID = 5;                           //包名
+    string channelName = 6;                         //渠道名
+}
+message AckDeviceLogin{
+    string token = 1;                               //token
+    bool isFirstLogin = 2;                          //是否是第一次登录
+    repeated FavoriteOption favoriteOption = 3;     //如果是第一次登录，进入偏好设置
+    message FavoriteOption{
+        Gender gender = 1;                          //性别
+        repeated string category = 2;               //偏好
+    }
+}
+
+//----------------------------------------------------------------------------------------
+//用户修改个人信息及第三方的绑定（v1/user/bind）
+//--请求ReqUserBind
+//--响应AckUserBind
+message ReqUserBind {
+    string name = 1;                                //昵称
+    Gender gender = 2;                              //性别
+    BindInfo bindInfo = 3;                          //绑定的第三方信息
+    message BindInfo {
+        LoginType loginType = 1;                    //第三方登录类型
+        string phoneNum = 2;                        //手机号(非必填项,LoginType.PHONE必定会验证)
+        string code = 3;                            //第三方登录的唯一编码（三方的code或者是手机短信）
+    }
+}
+
+message AckUserBind{
+    string msg = 1;
+}
+
+//----------------------------------------------------------------------------------------
+//用户登录（v1/user/login）
+//--请求ReqUserLogin
+//--响应AckUserLogin
+message ReqUserLogin{
+    LoginType loginType = 1;                        //第三方登录类型
+    string phoneNum = 2;							//手机号(非必填项,LoginType.PHONE必定会验证)
+    string code = 3;                                //第三方登录的唯一编码（三方的code或者是手机短信）
+    string packageName = 4;                         //包名称
+    string channelName = 5;                         //渠道名称
+}
+
+message AckUserLogin{
+    LoginType loginType = 1;                        //第三方登录类型
+    string token = 2;                               //token
+}
+//----------------------------------------------------------------------------------------
+//发送短信（v1/user/sms)
+//--请求ReqSMS
+//--响应AckSMS
+message ReqSMS{
+    string phoneNum = 1;                    		//手机号
+}
+//返回空
+message AckSMS{
+    string status = 1;
+}
+//用户偏好保存（v1/user/favorite)
+//--请求ReqFavorite
+//--响应AckFavorite
+message ReqFavorite{
+    Gender gender = 1;                              //性别
+    repeated string category = 2;                   //偏好
+    bool isSkip = 3;                                //当前用户是否选择跳过
+}
+//返回空
+message AckFavorite{
+    string status = 1;
+}
+
+//用户基本资料（v1/user/info)
+//--请求ReqUserInfo
+//--响应AckUserInfo
+message ReqUserInfo{
+}
+message AckUserInfo{
+    string userID = 1;
+    string name = 2;                                //用户名称
+    string headUrl = 3;                             //头像地址
+    Gender gender = 4;                              //性别
+    string phoneNum = 5;                            //手机号
+    bool   hasWechatOpenId = 6;                     //拥有微信的OpenId
+    bool   hasQQOpenId = 7;                         //拥有QQ
+    int32  score = 8;                               //用户当前的书币数量
+    int32  exp = 9;                                 //用户当前的经验值
+    int32  level = 10;                               //用户当前的等级
+}
+
+//经验等级数据（v1/user/expInfo)
+//--请求【ReqExpInfo】
+//--响应【AckExpInfo】
+message ReqExpInfo{
+}
+message AckExpInfo{
+    int32  currentLevel = 1;                         //当前等级
+    string progress = 2;                             //等级进度 eg: 12/15
+    int32  maxScore = 3;                             //最大书币上线
+    repeated ExpInfo expInfo = 5;                    //等级信息
+    message ExpInfo{
+        int32 level = 1;                             //所需等级
+        int32 maxScore = 2;                          //最大书币
+    }
+}

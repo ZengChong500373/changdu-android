@@ -1,0 +1,130 @@
+<resources>
+    <!-- 登录页 -->
+    <string name="input_tel">请输入手机号</string>
+    <string name="input_code">请输入验证码</string>
+    <string name="get_code">获取验证码</string>
+    <string name="click_login_agree">点击登录即代表同意</string>
+    <string name="user_agreement">《用户协议》</string>
+    <string name="other_login">其他登录方式</string>
+    <string name="skip">跳过</string>
+    <string name="re_get_code">重新发送(%1$s)</string>
+    <string name="reg_get_code">获取验证码</string>
+    <string name="authorization_success">授权成功</string>
+    <string name="authorization_fail">授权失败</string>
+    <string name="cancel_authorization">取消授权</string>
+    <string name="cancel_share">取消分享</string>
+    <string name="share_success">分享成功</string>
+    <string name="share_fail">分享失败</string>
+    <string name="check_sex">请选择您的性别</string>
+    <string name="boy">男生</string>
+    <string name="girl">女生</string>
+    <string name="check_preference">请选择您阅读偏好</string>
+    <string name="start_read">开启阅读之旅</string>
+    <string name="sent_code_to_email">已将验证码发送到邮箱，请注意查收</string>
+    <string name="input_valid_tel">请输入正确的手机号</string>
+
+    <string name="errcode_success">发送成功</string>
+    <string name="errcode_cancel">发送取消</string>
+    <string name="errcode_deny">发送被拒绝</string>
+    <string name="errcode_unsupported">不支持错误</string>
+    <string name="errcode_unknown">发送返回</string>
+
+    <!-- 设置 -->
+    <string name="setup">设置</string>
+    <string name="clear_cache">清理缓存</string>
+    <string name="night_mode">夜间模式</string>
+    <string name="version_update">版本更新</string>
+    <string name="switch_account">切换账号</string>
+    <string name="auto_subscribe">自动订阅</string>
+    <string name="login_out">退出登录</string>
+    <string name="login_out_success">已退出登录</string>
+    <string name="login_out_msg">退出登录后将不能离线看书，保存记录等，是否确定？</string>
+    <string name="check_new_version">检查新版本...</string>
+    <string name="no_new_version">暂时没有新版本</string>
+    <string name="cleared_cache">已清空缓存</string>
+    <string name="clear_cache_tips">确定清空本地所有缓存吗？</string>
+
+    <string name="account_center">账户中心</string>
+    <string name="handle_task">做任务</string>
+    <string name="reward_record">奖励记录</string>
+    <string name="exchange_record">兑换记录</string>
+
+    <!-- 个人资料 -->
+    <string name="user_info">个人资料</string>
+    <string name="avatar">头像</string>
+    <string name="nickname">昵称</string>
+    <string name="goto_set">去设置</string>
+    <string name="sex">性别</string>
+    <string name="tel">手机号</string>
+    <string name="go_to_bind">去绑定</string>
+    <string name="had_bind">已绑定</string>
+    <string name="wechat">微信</string>
+    <string name="qq">QQ</string>
+    <string name="friend_circle">朋友圈</string>
+
+    <!-- 经验等级 -->
+    <string name="level_exp">经验等级</string>
+    <string name="curr_level">当前等级</string>
+    <string name="curr_progress">等级进度</string>
+    <string name="coin_ceiling">书币上限</string>
+    <string name="level_sp_table">等级特权表</string>
+    <string name="level">等级</string>
+
+    <!-- 帮助反馈 -->
+    <string name="help_feedback">帮助反馈</string>
+    <string name="faq">问题与建议</string>
+    <string name="get_book_area">求书区域</string>
+    <string name="contact">联系方式</string>
+    <string name="input_faq">请输入您的问题与建议</string>
+    <string name="submit">提交</string>
+    <string name="input_user_info">请输入您想看的书名以及作者等相关信息</string>
+    <string name="get_book">求书</string>
+    <string name="more_feedback">你还可以通过以下联系方式反馈</string>
+    <string name="contact_qq">客服QQ</string>
+    <string name="contact_wechat">客服微信</string>
+    <string name="contact_email">客服邮箱</string>
+
+
+    <string name="level_default">%d级</string>
+    <string name="history_record">历史记录</string>
+
+
+    <!-- 邀请朋友 -->
+    <string name="share">分享</string>
+    <string name="invite_friend_reward">每成功邀请朋友一人，您可获得</string>
+    <string name="my_invite_code_default">我的邀请码：%s</string>
+    <string name="invite_code_detail_default">1、邀请朋友安装%1$s \n2、让你的朋友打开%1$s 填写邀请码</string>
+    <string name="invite_friend">邀请好友</string>
+    <string name="invited_friend">已邀请好友</string>
+    <string name="received_coin_default">已获得%s</string>
+    <string name="write_invite_code">填写邀请码</string>
+    <string name="input_invite_code">请输入邀请码</string>
+    <string name="more_share">更多分享方式</string>
+    <string name="share_from_default">来自%s分享</string>
+
+    <!-- 签到 -->
+    <string name="sign_uninterrupted">已连续签到\n%d 天</string>
+    <string name="day_default">%s天</string>
+    <string name="user_signed_today">您今天已签到了</string>
+    <string name="receive">领取</string>
+    <string name="num_default">X %s</string>
+    <string name="sign">签到</string>
+    <string name="congratulate_acquire">恭喜您获得！</string>
+
+    <!-- 任务中心 -->
+    <string name="mission_center">任务中心</string>
+    <string name="start">开始</string>
+    <string name="share_to">分享到</string>
+
+    <string name="write_permission">你没有授予读写权限，是否重新授予权限？</string>
+
+    <string name="double_default">%s X 2</string>
+    <string name="coin_not_enough_default">%s不足，去做任务吧</string>
+    <string name="second">秒</string>
+    <string name="loading_video">正在加载视频...</string>
+    <string name="everyday_default">%s/天</string>
+
+    <string name="max_score_today">今天获取的积分已达到上限</string>
+
+
+</resources>

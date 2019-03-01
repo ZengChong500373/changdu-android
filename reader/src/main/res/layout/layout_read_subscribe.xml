@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_read_setting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true">
+
+    <include layout="@layout/layout_reader_toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/mask_color"
+        android:layout_marginBottom="@dimen/v_45"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_14"
+            android:textColor="@color/day_text"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="@dimen/v_14"
+            android:paddingBottom="@dimen/v_14"
+            android:text="@string/subscribe"
+            />
+
+        <View style="@style/line"
+            android:background="@color/reader_line" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/v_14"
+            android:layout_marginBottom="@dimen/v_14"
+            android:layout_marginLeft="@dimen/reader_setting_margin"
+            android:layout_marginRight="@dimen/reader_setting_margin"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_14"
+                android:textColor="@color/text_gray_color"
+                android:text="@string/should_pay"
+                />
+
+            <TextView
+                android:id="@+id/pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_14"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="right"
+                />
+
+        </FrameLayout>
+
+        <View style="@style/line"
+            android:background="@color/reader_line" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/v_14"
+            android:layout_marginBottom="@dimen/v_14"
+            android:layout_marginLeft="@dimen/reader_setting_margin"
+            android:layout_marginRight="@dimen/reader_setting_margin"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_14"
+                android:textColor="@color/text_gray_color"
+                android:text="@string/balance"
+                />
+
+            <TextView
+                android:id="@+id/balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_14"
+                android:textColor="@color/text_gray_color"
+                android:layout_gravity="right"
+                />
+
+        </FrameLayout>
+
+        <View style="@style/line"
+            android:background="@color/reader_line" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/v_14"
+            android:layout_marginBottom="@dimen/v_14"
+            android:layout_marginLeft="@dimen/reader_setting_margin"
+            android:layout_marginRight="@dimen/reader_setting_margin"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_14"
+                android:textColor="@color/text_gray_color"
+                android:text="@string/auto_subscribe"
+                />
+
+           <android.support.v7.widget.SwitchCompat
+               android:id="@+id/sc"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="right|center_vertical"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/enter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/v_45"
+        android:text="@string/enter"
+        android:textColor="@color/day_text"
+        android:textSize="@dimen/text_16"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:background="@drawable/selector_primary"
+        />
+
+</FrameLayout>

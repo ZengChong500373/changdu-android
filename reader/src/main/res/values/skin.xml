@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 日夜间模式更换的分割点 大于该值为夜间模式 -->
+    <integer name="dn_split">4</integer>
+
+    <!--             阅读器相关                -->
+    <!-- 阅读器字体 -->
+    <color name="read_font_0">#333</color>
+    <color name="read_font_1">#333</color>
+    <color name="read_font_2">#333</color>
+    <color name="read_font_3">#333</color>
+    <color name="read_font_4">#333</color>
+    <color name="read_font_5">#333</color>
+    <!-- 夜间模式 -->
+    <color name="read_font_6">#686868</color>
+
+    <!-- 阅读器背景 -->
+    <color name="read_bg_0">#FAFAFA</color>
+    <color name="read_bg_1">#E9DEBA</color>
+    <color name="read_bg_2">#C7DDB7</color>
+    <color name="read_bg_3">#F5C8C8</color>
+    <color name="read_bg_4">#E3CB9D</color>
+    <color name="read_bg_5">#F5D4A7</color>
+    <!-- 夜间模式 -->
+    <color name="read_bg_6">#202020</color>
+
+    <!-- 菜单背景 -->
+    <color name="menu_bg_0">#f4f6f8</color>
+    <color name="menu_bg_1">#f2e1df</color>
+    <color name="menu_bg_2">#dff2ea</color>
+    <color name="menu_bg_3">#dfe3f2</color>
+    <color name="menu_bg_4">#8a8d99</color>
+    <color name="menu_bg_5">#54555c</color>
+    <color name="menu_bg_6">#2e2f33</color>
+
+    <!-- 拖动条 -->
+    <color name="menu_bar_0">@color/colorPrimary</color>
+    <color name="menu_bar_1">#e39388</color>
+    <color name="menu_bar_2">#88e3bd</color>
+    <color name="menu_bar_3">#889ae3</color>
+    <color name="menu_bar_4">#889ae3</color>
+    <color name="menu_bar_5">#889ae3</color>
+    <color name="menu_bar_6">#889ae3</color>
+
+    <!-- 阅读背景 -->
+    <integer-array name="read_bg">
+        <item>@color/read_bg_0</item>
+        <item>@color/read_bg_1</item>
+        <item>@color/read_bg_2</item>
+        <item>@color/read_bg_3</item>
+        <item>@color/read_bg_4</item>
+        <item>@color/read_bg_5</item>
+        <item>@color/read_bg_6</item>
+    </integer-array>
+
+    <!-- 阅读字体颜色 -->
+    <integer-array name="read_font">
+        <item>@color/read_font_0</item>
+        <item>@color/read_font_1</item>
+        <item>@color/read_font_2</item>
+        <item>@color/read_font_3</item>
+        <item>@color/read_font_4</item>
+        <item>@color/read_font_5</item>
+        <item>@color/read_font_6</item>
+    </integer-array>
+
+    <!-- 菜单背景 -->
+    <integer-array name="menu_bg">
+        <item>@color/menu_bg_0</item>
+        <item>@color/menu_bg_1</item>
+        <item>@color/menu_bg_2</item>
+        <item>@color/menu_bg_3</item>
+        <item>@color/menu_bg_4</item>
+        <item>@color/menu_bg_5</item>
+        <item>@color/menu_bg_6</item>
+    </integer-array>
+
+    <!-- 拖动条 -->
+    <integer-array name="menu_bar">
+        <item>@color/menu_bar_0</item>
+        <item>@color/menu_bar_1</item>
+        <item>@color/menu_bar_2</item>
+        <item>@color/menu_bar_3</item>
+        <item>@color/menu_bar_4</item>
+        <item>@color/menu_bar_5</item>
+        <item>@color/menu_bar_6</item>
+    </integer-array>
+
+</resources>

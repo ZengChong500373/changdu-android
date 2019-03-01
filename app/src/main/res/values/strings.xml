@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">畅读小说</string>
+    <string name="main_tab_shelf">书架</string>
+    <string name="main_tab_stack">书库</string>
+    <string name="main_tab_mine">我的</string>
+
+    <string name="classify">分类</string>
+    <string name="ranking">排行</string>
+    <string name="find">发现</string>
+    <string name="boy_recommend">男生推荐</string>
+    <string name="girl_recommend">女生推荐</string>
+    <string name="for_another">换一批</string>
+
+
+    <string name="book_detail">书籍详情</string>
+
+    <string name="load_faile">数据加载失败</string>
+    <string name="catalog">目录</string>
+    <string name="u_may_like">你可能喜欢</string>
+    <string name="more">更多</string>
+
+    <string name="rank">排行榜</string>
+    <string name="boy">男生</string>
+    <string name="girl">女生</string>
+
+    <string name="add_shelf">加入书架</string>
+    <string name="remove_shelf">移除书架</string>
+    <string name="read_now">立即阅读</string>
+
+    <string name="shelf_welfare_hint">更多福利尽在任务中心</string>
+    <string name="add_u_favorite_novels">添加你喜欢的小说</string>
+    <string name="shelf_empty_describe">书架很空,快去书库添加一些吧</string>
+    <string name="go_stack">去书库</string>
+    <string name="go_top">置顶</string>
+    <string name="batch_management">批量管理</string>
+    <string name="delete">删除</string>
+    <string name="all_select">全选</string>
+
+    <string name="positive_order">正序</string>
+    <string name="inverted_order">倒序</string>
+
+    <string name="search_hint">书名、作者、关键字</string>
+
+    <string name="hot_search">热门搜索</string>
+    <string name="history_record">历史记录</string>
+
+    <string name="dont_have_data">对不起，没找到相关小说！o(╯□╰)o</string>
+    <string name="this_is_max_page">对不起，没有更多小说了，o(╯□╰)o</string>
+    <string name="history_record_null">没找到您相关的历史记录，o(╯□╰)o</string>
+</resources>

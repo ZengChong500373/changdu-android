@@ -1,0 +1,44 @@
+syntax = "proto3";
+option java_package = "com.api.changdu.proto";
+option java_outer_classname = "SystemApi";
+//----------------------------------------------------------------------------------------
+//系统初始化(v1/system/init)
+//请求【ReqSystemInit】
+//响应【AckSystemInit】
+message ReqSystemInit {
+
+}
+
+message AckSystemInit {
+    string productVersion = 1;                      //版本号
+    int32 cost = 2;                                 //每章书币花费
+    ContactInformation contactInformation = 3;      //联系方式
+    Advert advert = 4;                              //广告信息
+    Share shareApp = 5;                             //分享【app详情】
+    Share shareBook = 6;                            //分享【书籍详情 分享地址:replace-->{bookId} 】
+    UpdateMessage updateMessage = 7;                //更新信息
+    //联系方式
+    message ContactInformation {
+        string qq = 1;                              //QQ
+        string wechat = 2;                          //微信
+        string email = 3;                           //邮箱
+    }
+    //广告信息
+    message Advert {
+        string appID = 1;                           //
+        string pluginID = 2;                        //插页广告id
+        string videoID = 3;                         //视频广告id
+    }
+    //分享
+    message Share {
+        string url = 1;                             //分享地址
+        string detail = 2;                          //分享内容
+    }
+    //更新信息
+    message UpdateMessage {
+        bool   forceUpdate = 1;                     //是否强制更新
+        string downloadUrl = 2;                     //下载地址
+        string updateTitle = 3;                     //更新标题
+        string updateDescription = 4;               //更新内容
+    }
+}

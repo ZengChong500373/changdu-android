@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/h_30"
+    android:paddingBottom="@dimen/h_30"
+    >
+
+<TextView
+    android:textSize="@dimen/sp_14"
+    android:textColor="@color/text_color_gray"
+    android:text="@string/add_u_favorite_novels"
+    android:layout_width="wrap_content"
+    android:drawablePadding="@dimen/h_5"
+    android:layout_centerHorizontal="true"
+    android:drawableLeft="@drawable/main_shelf_add"
+    android:layout_height="wrap_content" />
+</RelativeLayout>

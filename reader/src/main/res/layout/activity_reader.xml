@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.linyi.reader.ui.PageWidget
+        android:id="@+id/page_widget"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <org.linyi.base.ui.weidgt.TempView
+        android:id="@+id/tempView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <View
+        android:id="@+id/eye_care_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/eye_care"
+        android:visibility="gone"
+        />
+
+</FrameLayout>

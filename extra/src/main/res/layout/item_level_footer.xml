@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/left"
+        style="@style/remain_wrap"
+        android:layout_height="@dimen/v_40"
+        android:textSize="@dimen/text_12"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:text="@string/level"
+        />
+
+    <TextView
+        android:id="@+id/right"
+        style="@style/remain_wrap"
+        android:layout_height="@dimen/v_40"
+        android:textSize="@dimen/text_12"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:text="@string/coin_ceiling"
+        />
+
+</LinearLayout>
+

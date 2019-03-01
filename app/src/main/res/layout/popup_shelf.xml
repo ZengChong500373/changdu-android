@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/Animation.AppCompat.Dialog"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/popu_book_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:paddingTop="@dimen/h_16"
+        android:paddingBottom="@dimen/h_16"
+        android:text="@string/book_detail"
+        android:textColor="@color/text_color" />
+
+    <TextView
+        android:id="@+id/popu_go_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h_0_5"
+        android:background="@color/white"
+        android:gravity="center"
+        android:paddingTop="@dimen/h_16"
+        android:paddingBottom="@dimen/h_16"
+        android:text="@string/go_top"
+        android:textColor="@color/text_color" />
+
+    <TextView
+      android:id="@+id/popu_batch_management"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h_0_5"
+        android:background="@color/white"
+        android:gravity="center"
+        android:paddingTop="@dimen/h_16"
+        android:paddingBottom="@dimen/h_16"
+        android:text="@string/batch_management"
+        android:textColor="@color/text_color" />
+
+
+
+    <TextView
+        android:id="@+id/popu_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h_0_5"
+        android:background="@color/white"
+        android:gravity="center"
+        android:paddingTop="@dimen/h_16"
+        android:paddingBottom="@dimen/h_16"
+        android:text="@string/delete"
+        android:textColor="@color/text_color" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#D2D2D2"/>
+
+    <TextView
+        android:id="@+id/popu_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h_0_5"
+        android:background="@color/white"
+        android:gravity="center"
+        android:paddingTop="@dimen/h_16"
+        android:paddingBottom="@dimen/h_16"
+        android:text="@string/cancel"
+        android:textColor="@color/text_color_gray" />
+</LinearLayout>

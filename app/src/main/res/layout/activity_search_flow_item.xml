@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/h_4"
+    android:paddingTop="@dimen/h_4"
+    android:paddingLeft="@dimen/h_4"
+    android:gravity="center"
+    android:paddingRight="@dimen/h_4"
+    android:orientation="vertical">
+    <TextView
+        android:background="@drawable/search_hot_shape"
+        android:id="@+id/tv_word"
+        android:layout_width="wrap_content"
+        android:text="斗罗大陆"
+       android:paddingLeft="@dimen/h_16"
+        android:paddingRight="@dimen/h_16"
+        android:paddingTop="@dimen/h_8"
+        android:paddingBottom="@dimen/h_8"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color_gray"
+        android:textSize="@dimen/sp_12"
+        />
+
+</FrameLayout>

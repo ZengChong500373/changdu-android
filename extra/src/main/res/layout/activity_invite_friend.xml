@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <!--<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/tool_bar_height">-->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/h_10"
+            android:layout_marginTop="@dimen/tool_bar_height">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/v_24"
+                android:adjustViewBounds="true"
+                android:layout_marginLeft="@dimen/h_10"
+                android:layout_marginRight="@dimen/h_10"
+                android:src="@mipmap/ic_reward_header_bg"/>
+
+            <LinearLayout
+                android:id="@+id/inside_pages_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/v_24"
+                android:layout_marginLeft="@dimen/h_30"
+                android:layout_marginRight="@dimen/h_30"
+                android:background="@mipmap/bg_reward"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/wrap_wrap"
+                    android:textColor="@color/text_dark_color"
+                    android:textSize="@dimen/text_17"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:maxLines="2"
+                    android:layout_marginTop="@dimen/v_24"
+                    android:textStyle="bold"
+                    android:text="@string/invite_friend_reward"/>
+
+                <TextView
+                    android:id="@+id/rewardNum"
+                    style="@style/wrap_wrap"
+                    android:drawableLeft="@mipmap/ic_coin"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/v_12"
+                    android:textSize="@dimen/text_21"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_gravity="center_horizontal"
+                    android:text=" X 500"
+                    />
+
+            </LinearLayout>
+
+         <!--   <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/v_130"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_reward_header_fg"
+                />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/v_90"
+                android:layout_marginLeft="@dimen/h_10"
+                android:layout_marginRight="@dimen/h_10"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_reward_header_fg"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/ic_reward_header_fg_color"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/v_90"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/my_invite_code"
+                    style="@style/wrap_wrap"
+                    android:textColor="@color/white"
+                    android:text="@string/my_invite_code_default"
+                    android:layout_marginTop="@dimen/v_90"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="@dimen/text_15"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/invite_code_des"
+                    style="@style/wrap_wrap"
+                    android:textSize="@dimen/text_15"
+                    android:textColor="@color/share_pink_text"
+                    android:lineSpacingMultiplier="1.4"
+                    android:layout_marginTop="@dimen/v_25"
+                    android:layout_marginLeft="@dimen/v_47"
+                    android:layout_marginRight="@dimen/v_47"
+                    android:maxLines="4"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/h_30"
+                    android:layout_marginRight="@dimen/h_30"
+                    android:layout_marginTop="@dimen/v_25"
+                    android:orientation="horizontal"
+                    android:background="@drawable/shape_invite_friend_round">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/v_16"
+                        android:layout_marginVertical="@dimen/v_16"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/wrap_wrap"
+                            android:textColor="@color/share_color_primary"
+                            android:textSize="@dimen/text_13"
+                            android:text="@string/invited_friend"/>
+
+                        <TextView
+                            android:id="@+id/invited_friend"
+                            style="@style/wrap_wrap"
+                            android:textColor="@color/share_color_primary"
+                            android:textSize="@dimen/text_19"
+                            android:textStyle="bold"
+                            android:text="3"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/v_16"
+                        android:layout_marginVertical="@dimen/v_16"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/received_mars_coin_key"
+                            style="@style/wrap_wrap"
+                            android:textColor="@color/share_color_primary"
+                            android:textSize="@dimen/text_13"/>
+
+                        <TextView
+                            android:id="@+id/received_mars_coin"
+                            style="@style/wrap_wrap"
+                            android:textColor="@color/share_color_primary"
+                            android:textSize="@dimen/text_19"
+                            android:textStyle="bold"
+                            android:text="500"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/v_20">
+
+                    <View style="@style/line"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:background="@color/share_line"
+                        android:layout_marginLeft="@dimen/h_60"/>
+
+                    <TextView style="@style/wrap_wrap"
+                        android:textSize="@dimen/text_14"
+                        android:textColor="@color/white"
+                        android:text="@string/invite_friend"
+                        android:layout_marginLeft="@dimen/h_10"
+                        android:layout_marginRight="@dimen/h_10"
+                        />
+
+                    <View style="@style/line"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:background="@color/share_line"
+                        android:layout_marginRight="@dimen/h_60"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/wechat"
+                        style="@style/wrap_wrap"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_11"
+                        android:gravity="center_horizontal"
+                        android:drawableTop="@mipmap/ic_share_wechat"
+                        android:drawablePadding="@dimen/h_8"
+                        android:padding="@dimen/h_25"
+                        android:text="@string/wechat"
+                        />
+
+                    <TextView
+                        android:id="@+id/friend_circle"
+                        style="@style/wrap_wrap"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="@dimen/h_30"
+                        android:textSize="@dimen/text_11"
+                        android:gravity="center_horizontal"
+                        android:drawableTop="@mipmap/ic_share_friend_circle"
+                        android:drawablePadding="@dimen/h_8"
+                        android:padding="@dimen/h_25"
+                        android:text="@string/friend_circle"
+                        />
+
+                   <!-- <TextView
+                        android:id="@+id/qq"
+                        style="@style/wrap_wrap"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_11"
+                        android:gravity="center_horizontal"
+                        android:drawableTop="@mipmap/ic_qq"
+                        android:drawablePadding="@dimen/h_8"
+                        android:padding="@dimen/h_25"
+                        android:text="@string/qq"
+                        />-->
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_14"
+                    android:drawableRight="@mipmap/ic_share_back"
+                    android:drawablePadding="@dimen/h_8"
+                    android:textColor="@color/more_share"
+                    android:text="@string/more_share"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/v_29"
+                    />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+ <!--   </ScrollView>-->
+
+</FrameLayout>

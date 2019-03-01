@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_read_setting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true">
+
+    <include layout="@layout/layout_reader_toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:clickable="true"
+        android:background="@color/mask_color">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/reader_setting_height"
+            android:layout_marginLeft="@dimen/reader_setting_margin"
+            android:layout_marginRight="@dimen/reader_setting_margin"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_light"
+                />
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:maxHeight="@dimen/v_3"
+                android:minHeight="@dimen/v_3"
+                android:max="100"
+                android:progressDrawable="@drawable/seekbar_drawable"
+                android:thumb="@drawable/seekbar_thumb"
+                android:layout_marginLeft="@dimen/h_9"
+                android:layout_marginRight="@dimen/h_30"/>
+
+            <CheckedTextView
+                android:id="@+id/follow_sys"
+                android:text="@string/follow_sys"
+                android:textAlignment="center"
+                style="@style/reader_setting_btn" />
+
+        </LinearLayout>
+
+        <View style="@style/line"
+            android:background="@color/reader_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/reader_setting_height"
+            android:layout_marginLeft="@dimen/reader_setting_margin"
+            android:layout_marginRight="@dimen/reader_setting_margin"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/add_font"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="A +"
+                style="@style/reader_setting_btn"
+                />
+
+            <TextView
+                android:id="@+id/remove_font"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="A -"
+                android:layout_marginLeft="@dimen/v_10"
+                android:layout_marginRight="@dimen/v_10"
+                style="@style/reader_setting_btn" />
+
+            <CheckedTextView
+                android:id="@+id/complex_chinese"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/complex_chinese"
+                android:textAlignment="center"
+                style="@style/reader_setting_btn"
+                android:layout_marginRight="@dimen/h_30"
+                />
+
+            <TextView
+                android:id="@+id/custom_font"
+                android:text="@string/custom_font"
+                style="@style/reader_setting_btn" />
+
+        </LinearLayout>
+
+         <View style="@style/line"
+            android:background="@color/reader_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/reader_setting_height"
+            android:layout_marginLeft="@dimen/reader_setting_margin"
+            android:layout_marginRight="@dimen/reader_setting_margin"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/layout_tight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/v_30"
+                android:src="@mipmap/ic_layout_5"
+                />
+
+            <ImageView
+                android:id="@+id/layout_normal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/v_30"
+                android:src="@mipmap/ic_layout_3"
+                android:layout_marginLeft="@dimen/v_10"
+                android:layout_marginRight="@dimen/v_10"
+                />
+
+            <ImageView
+                android:id="@+id/layout_spacious"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/v_30"
+                android:src="@mipmap/ic_layout_2"
+                android:layout_marginRight="@dimen/h_30"
+                />
+
+            <TextView
+                android:id="@+id/custom_layout"
+                android:text="@string/custom_layout"
+                style="@style/reader_setting_btn" />
+
+        </LinearLayout>
+
+         <View style="@style/line"
+            android:background="@color/reader_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/reader_setting_height"
+            android:layout_marginLeft="@dimen/reader_setting_margin"
+            android:layout_marginRight="@dimen/reader_setting_margin"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/themeColorContainer"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"/>
+
+            <TextView
+                android:id="@+id/custom_bg"
+                android:text="@string/custom_bg"
+                style="@style/reader_setting_btn" />
+
+        </LinearLayout>
+
+         <View style="@style/line"
+            android:background="@color/reader_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/reader_setting_height"
+            android:layout_marginLeft="@dimen/reader_setting_margin"
+            android:layout_marginRight="@dimen/reader_setting_margin"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <CheckedTextView
+                android:id="@+id/eye_care_mode"
+                android:text="@string/eye_care_mode"
+                android:textAlignment="center"
+                style="@style/reader_setting_btn" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+
+            <CheckedTextView
+                android:id="@+id/auto_read"
+                android:text="@string/auto_read"
+                android:textAlignment="center"
+                style="@style/reader_setting_btn" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/page_mode"
+                android:text="@string/page_mode"
+                style="@style/reader_setting_btn" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
